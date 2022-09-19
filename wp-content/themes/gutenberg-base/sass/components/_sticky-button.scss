@@ -1,0 +1,106 @@
+.sticky-button {
+
+    &__container {
+        position: fixed;
+        z-index: 10000;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $sec-brand-color;
+
+        @media(min-width: $xlg) {
+            bottom: auto;
+            left: auto;
+            top: 50%;
+            right: 0;
+            width: 50px;
+        }
+
+        a {
+            display: flex;
+            flex-direction: row-reverse;
+            text-decoration: none;
+
+            @media(min-width: $xlg) {
+                display: block;
+            }
+
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+
+    &__arrow {
+        margin: 0 auto;
+        width: 20%;
+        background-color: $darker-sec-brand-color;
+        padding: 18px 15px 18px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media(min-width: $xlg) {
+            width: auto;
+            margin-bottom: 40px;
+        }
+
+        svg {
+            width: 30px;
+        }
+
+        &.white {
+            background-color: $darker-white;
+        }
+    }
+
+    &__text {
+
+        width: 80%;
+
+        @media(min-width: $xlg) {
+            transform: rotate(-90deg) translateX(-10px);
+            width: auto;
+        }
+
+        p {
+            color: $white;
+            font-family: $base-font-family;
+            font-weight: 700;
+            font-size: 25px;
+            margin-bottom: 12px;
+            margin-top: 10px;
+            padding-left: 25px;
+
+            @media(min-width: $xlg) {
+                margin-bottom: 28px;
+                margin-top: 0;
+                padding-left: 0;
+            }
+        }
+
+        &.white {
+            background-color: $white;
+
+            p {
+                color: $black;
+            }
+        }
+
+        .desktop {
+            display: none;
+
+            @media(min-width: $xlg) {
+                display: block;
+            }
+        }
+
+        .mob {
+            display: block;
+          
+            @media(min-width: $xlg) {
+                display: none;
+            }
+        }
+    }
+}

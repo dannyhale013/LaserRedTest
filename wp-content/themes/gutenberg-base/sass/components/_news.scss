@@ -1,0 +1,195 @@
+.news {
+
+    padding: 0;
+
+    @media(min-width: $md) {
+        padding: 40px 20px 40px 20px;
+    }
+
+    @media(min-width: $lg) {
+        padding: 60px 20px 60px 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+
+        @media(min-width: $xlg) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(100% - 200px);
+            height: 100%;
+            background-color: $brand-color;
+            display: none;
+            z-index: -1;
+
+            @media(min-width: $lg) {
+                display: block;
+            }
+    
+            @media(min-width: $lg) {
+                width: calc(100% - 350px);
+            }
+        }
+    }
+
+    &__info {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        background-color: $brand-color;
+
+        @media(min-width: $md) {
+            width: calc(33.33333% - 20px);
+            padding: 0;
+        }
+    }
+
+    &__cta {
+        margin-top: 20px;
+    }
+
+    &__items {
+        width: 100%;
+
+        @media(min-width: $md){
+            width: calc(66.6666% - 20px);
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-decoration: none;
+        flex-direction: column-reverse;
+
+        @media(min-width: $md) {
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            .news__item-info {
+                padding-bottom: 0;
+
+                @media(min-width: $md) {
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        max-width: 350px;
+        width: 100%;
+
+        h3 {
+            line-height: 1;
+            font-weight: 500;
+            font-size: 70px;
+            text-transform: uppercase;
+            color: $white;
+
+            @media(min-width: $md) {
+                font-size: 55px;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 70px;
+            }
+
+        }
+    }
+
+    &__item-image {
+        width: 100%;
+        padding-bottom: 350px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media(min-width: $md) {
+            width: 200px;
+            padding-bottom: 0;
+        }
+
+        @media(min-width: $lg) {
+            width: 350px;
+        }
+    }
+
+    &__item-info {
+        width: 100%;
+        background-color: $white;
+        padding: 40px;
+
+        @media(min-width: $md) {
+            width: calc(100% - 200px);
+            border-left: 5px solid $sec-brand-color;
+        }
+
+        @media(min-width: $lg) {
+            width: calc(100% - 350px);
+        }
+    }
+
+    &__item-date {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+
+        p {
+            font-size: 16px;
+            font-family: $sec-font-family;
+            text-transform: uppercase;
+            font-weight: 700    ;
+            color: $sec-brand-color;
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 20px;
+
+        h4 {
+            line-height: 1.2;
+            color: $brand-color;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__item-desc {
+        margin-bottom: 15px;
+        p {
+            margin: 0;
+            color: $brand-color;
+            font-size: 16px;
+        }
+    }
+}
